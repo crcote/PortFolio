@@ -17,13 +17,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
+}
+
+.name{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.title {
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+
+.container-nav {
+    width: 40%;
+    margin: 0;
 }
 
 .navigation {
     margin: 0;
     position: relative;
-    width: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,16 +55,18 @@ header {
 
 .navigation ul li {    
     list-style: none;
+    width: 80px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-weight:500;    
+    font-weight:bolder;    
 }
 
-.navigation ul li a .icon {
+.icon {
     position: relative;
     display: block;
-    font-size: 10px;
+    font-size: 1.5rem;
 }
 
