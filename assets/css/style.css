@@ -4,8 +4,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-:root
-{
+:root {
     --bg: #bbb;
     --tx: #e4e4e4;
     --wh: #e4e4e4;
@@ -14,39 +13,36 @@
 html {
     background-color: black;
 }
+
 /* Estilo header */
 header {
     position: fixed;
     width: 100%;
     background: transparent;
     backdrop-filter: blur(20px);
-}
-
-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 4rem 1rem 4rem;
 }
 
-.name{
+.name {
     display: flex;
-    width: 35%;
-    height: 55px;
     justify-content: center;
 }
+
 .title {
     color: var(--tx);
     position: relative;
-    font-weight:700;
+    font-weight: 700;
     font-size: 3.5rem;
     text-shadow: 1px 1px 0 #0000008c, 2px 2px 0 #bbb, 3px 3px 0 #aaa, 4px 4px 0 #888;
     cursor: pointer;
 }
 
-.title::after{
-    content: ''; 
-    position:absolute;
+.title::after {
+    content: '';
+    position: absolute;
     left: 0;
     top: 65px;
     width: 100%;
@@ -54,35 +50,35 @@ header {
     background: var(--tx);
     border-radius: 1rem;
     transform-origin: right;
-    transform: scaleX(0); 
+    transform: scaleX(0);
     transition: transform 0.5s;
 }
 
-.title:hover::after { 
+.title:hover::after {
     transform-origin: left;
     transform: scaleX(1);
     box-shadow: 0.2rem 0.2rem 0.2rem var(--bg);
 }
 
 .container-nav {
-    width: 35%;
     margin: 0;
 }
+
 .navbar {
-    margin-right: 2rem;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.navbar a{
+.navbar a{ 
     position: relative;
     text-decoration: none;
     color: var(--tx);
     font-weight: 700;
     text-align: center;
+    margin-left: 1rem;
   }
 
-  .navbar a span::after {
+.navbar a span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -94,9 +90,9 @@ header {
     transform: translatey(10px);
     opacity: 0;
     transition: 1s;
-  }
+}
 
-.navbar a span:hover::after{
+.navbar a span:hover::after {
     transform: translateY(0);
     opacity: 1;
 }
@@ -136,7 +132,7 @@ header {
 
 .content .logo {
     font-size: 40px;
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
 .text-home h2 {
@@ -145,7 +141,7 @@ header {
     line-height: 1;
 }
 
-.text-home h2 span{
+.text-home h2 span {
     font-size: 30px;
 }
 
@@ -158,10 +154,10 @@ header {
 .socials a ion-icon {
     font-size: 30px;
     color: var(--wh);
-    margin-right: 15px ;
+    margin-right: 15px;
     transition: .5s ease;
 }
 
-.socials a:hover ion-icon{
+.socials a:hover ion-icon {
     transform: scale(1.5);
 }
