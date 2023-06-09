@@ -7,7 +7,8 @@
 :root
 {
     --bg: #bbb;
-    --tx: #424242;
+    --tx: #e4e4e4;
+    --wh: #e4e4e4;
 }
 
 html {
@@ -30,7 +31,7 @@ header {
 
 .name{
     display: flex;
-    width: 50%;
+    width: 35%;
     height: 55px;
     justify-content: center;
 }
@@ -106,3 +107,61 @@ header {
     font-size: 1.5rem;
 }
 
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 700px;
+    background: url(../img/img-home.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background-color: transparent;
+    padding: 80px;
+    color: var(--wh);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content .logo {
+    font-size: 40px;
+    font-weight:bolder;
+}
+
+.text-home h2 {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.text-home h2 span{
+    font-size: 30px;
+}
+
+.text-home p {
+    font-size: 20px;
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.socials a ion-icon {
+    font-size: 30px;
+    color: var(--wh);
+    margin-right: 15px ;
+    transition: .5s ease;
+}
+
+.socials a:hover ion-icon{
+    transform: scale(1.5);
+}
