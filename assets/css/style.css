@@ -9,11 +9,16 @@
     --bg: #5a5e3d;
     --tx: #222222;
 }
+
+html {
+    background-color: var(--bg);
+}
 /* Estilo header */
-.nav-header {
+header {
     position: fixed;
     width: 100%;
     background: transparent;
+    backdrop-filter: blur(20px);
 }
 
 header {
@@ -63,7 +68,7 @@ header {
     margin: 0;
 }
 .navbar {
-    margin: 0;
+    margin-right: 2rem;
     padding: 0;
     justify-content: space-evenly;
 }
