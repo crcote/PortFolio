@@ -8,11 +8,12 @@
     --bg: #bbb;
     --tx: #e4e4e4;
     --wh: #e4e4e4;
+    --bl: #202020;
 }
 
 html {
     background-color: black;
-    
+
 }
 
 /* Estilo header */
@@ -139,7 +140,7 @@ header {
     padding-top: 20px;
     cursor: pointer;
     font-size: 2rem;
-    display: none;    
+    display: none;
 }
 
 /* Seccion Responsiva de nav */
@@ -152,14 +153,25 @@ header {
         display: block;
     }
 
+    .navbar a {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar a:hover {
+        color: blue;
+    }
+
     .show-nav {
         display: block;
         position: absolute;
         right: 30px;
         top: 75px;
-        background-color: transparent;
-        height: 100px;
-        width: 100px;
+        background-color: var(--bl);
+        height: auto;
+        width: 130px;
+        border-radius: 0.5rem;
+        
     }
 
     .show-nav nav a span {
@@ -169,7 +181,7 @@ header {
     .show-nav nav a p {
         display: block;
         border-bottom: 1px solid var(--wh);
-
+        
     }
 
 }
@@ -177,10 +189,17 @@ header {
 /* Estilo Inicio */
 main {
     height: 100vh;
-    background-color: black;   
+    background-color: black;
+    display: flex;
+}
+
+.container-home {
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .home {
@@ -188,7 +207,7 @@ main {
     background-size: cover;
     height: 700px;
     width: 80%;
-    display: flex;     
+    display: flex;
 }
 
 .content {
@@ -234,4 +253,48 @@ main {
 
 .socials a:hover ion-icon {
     transform: scale(1.5);
+}
+
+/* Responsive Home */
+
+@media screen and (max-width: 1100px) {
+    main {
+        align-items: start;
+    }
+
+    .home {
+        height: auto;
+    
+    }
+    
+   .content {
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .content .logo {
+        display: none;
+    }
+
+    .text-home h2 {
+        font-size: 30px;
+    }
+
+    .text-home h2 span {
+        display: none;
+    }
+
+    .text-home p {
+        font-size: 14px;
+    }
+
+    .socials {
+        margin-top: 20px;
+    }
+
+    .socials a ion-icon {
+        font-size: 24px;
+        margin-right: 10px;
+    }
 }
