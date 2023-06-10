@@ -12,7 +12,7 @@
 
 html {
     background-color: black;
-    scroll-behavior: smooth;
+    
 }
 
 /* Estilo header */
@@ -175,25 +175,24 @@ header {
 }
 
 /* Estilo Inicio */
+main {
+    height: 100vh;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 700px;
+.home {
     background: url(../img/img-home.jpg)no-repeat;
     background-size: cover;
-    background-position: center;
-
+    height: 700px;
+    width: 80%;
+    display: flex;     
 }
 
 .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 58%;
+    width: 70%;
     height: 100%;
     background-color: transparent;
     padding: 80px;
@@ -204,6 +203,7 @@ header {
 }
 
 .content .logo {
+    display: flex;
     font-family: 'Righteous';
     font-size: 40px;
     font-weight: 400;
@@ -235,5 +235,3 @@ header {
 .socials a:hover ion-icon {
     transform: scale(1.5);
 }
-
-/* Estilo Inicio */
