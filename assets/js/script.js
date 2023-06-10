@@ -1,4 +1,4 @@
-let showMenu = false; // Declaro variable p
+let showMenu = false; // Declaro variable
 
 function showHiddenMenu(){ // Funcion para ocultar y mostrar menu
     if (showMenu) {
