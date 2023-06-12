@@ -4,16 +4,30 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-image: linear-gradient(135deg, #000000, #060606, #121212, #181818, #242424, #303030, #363636);
+    background-size: 500%;
+    animation: fanimado 20s linear infinite;
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;        
+    }
+
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
 :root {
     --bg: #bbb;
     --tx: #e4e4e4;
     --wh: #e4e4e4;
     --bl: #202020;
-}
-
-html {
-    background-color: black;
-
 }
 
 /* Estilo header */
@@ -80,17 +94,6 @@ header {
     transform: scale(1.5);
 }
 
-/* Responsive del Title */
-@media screen and (max-width:1100px) {
-    header section {
-        display: none;
-    }
-
-    .logo-responsive {
-        display: block;
-    }
-}
-
 .container-nav {
     margin: 0;
 }
@@ -109,7 +112,11 @@ header {
     margin-left: 1rem;
 }
 
-.navbar a span::after {
+.show-nav a ion-icon:hover {
+    color: rgb(118, 107, 82);
+}
+
+.navbar a p::after {
     content: '';
     position: absolute;
     left: 0;
@@ -123,7 +130,7 @@ header {
     transition: 1s;
 }
 
-.navbar a span:hover::after {
+.navbar a p:hover::after {
     transform: translateY(0);
     opacity: 1;
 }
@@ -143,53 +150,10 @@ header {
     display: none;
 }
 
-/* Seccion Responsiva de nav */
-@media screen and (max-width:1100px) {
-    header section {
-        display: none;
-    }
-
-    .nav-responsive {
-        display: block;
-    }
-
-    .navbar a {
-        width: 100%;
-        margin: 0;
-    }
-
-    .navbar a:hover {
-        color: blue;
-    }
-
-    .show-nav {
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: 75px;
-        background-color: var(--bl);
-        height: auto;
-        width: 130px;
-        border-radius: 0.5rem;
-        
-    }
-
-    .show-nav nav a span {
-        display: none;
-    }
-
-    .show-nav nav a p {
-        display: block;
-        border-bottom: 1px solid var(--wh);
-        
-    }
-
-}
-
+   
 /* Estilo Inicio */
 main {
     height: 100vh;
-    background-color: black;
     display: flex;
 }
 
@@ -255,19 +219,59 @@ main {
     transform: scale(1.5);
 }
 
-/* Responsive Home */
+/* Seccion responsiva a 1030px */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width:1030px) {
+    .logo-responsive {
+        display: block;
+    }
+
+    header section {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    .navbar a {
+        width: 100%;
+        margin: 0;
+    }
+
+    .show-nav {
+        display: block;
+        position: absolute;
+        right: 55px;
+        top: 75px;
+        background-color: var(--bl);
+        height: auto;
+        width: 50px;
+        border-radius: 0.5rem;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .show-nav nav a p {
+        display: none;
+    }
+
+    .show-nav nav a ion-icon {
+        width: 100%;
+        display: block;
+        margin-bottom: 4px;
+    }
+
     main {
         align-items: start;
     }
 
     .home {
         height: auto;
-    
+
     }
-    
-   .content {
+
+    .content {
         width: 100%;
         padding: 40px;
         text-align: center;
